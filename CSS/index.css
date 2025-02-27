@@ -1,0 +1,307 @@
+.newbies {
+    height: calc(100vh - 100px);
+}
+
+.trial-lesson {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.ready {
+    font-size: 40px;
+    font-weight: 700;
+    padding: 15px 0;
+}
+
+.big-arrow {
+    width: 220px;
+    transform: rotate(90deg);
+    padding: 45px 0;
+}
+
+.regi {
+    font-size: 20px;
+    max-width: 280px;
+    padding: 25px 0;
+}
+
+.button-regi {
+    background-color: #370033;
+    padding: 18px 120px;
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.small-arrows {
+    width: auto;
+    padding: 25px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+.small-arrow {
+    width: 60px;
+    height: 44px;
+    transform: rotate(270deg);
+}
+
+.wrapper {
+    margin: 20px 25px;
+    position: relative;
+}
+.wrapper i {
+    color: rgb(174, 4, 127);
+    top: 50%;
+    height: 46px;
+    width: 46px;
+    cursor: pointer;
+    position: absolute;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 46px;
+    background: none;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    border: 2px solid rgb(174, 4, 127);
+}
+.wrapper i:first-child {
+    left: -15px;
+    display: none;
+}
+.wrapper i:last-child {
+    right: -15px;
+}
+.wrapper i:hover {
+    color: white; 
+    background: rgb(174, 4, 127); 
+}
+.carousel {
+    font-size: 0px;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+}
+.carousel.dragging {
+    cursor: grab;
+    scroll-behavior: auto;
+}
+.carousel.dragging img {
+    pointer-events: none;
+}
+.carousel img {
+    margin-left: 14px;
+    height: 340px;
+    object-fit: cover;
+    width: calc(100% / 3);
+}
+.carousel img:first-child {
+    margin-left: 0px;
+}
+
+.invite {
+    padding: 120px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.letsgo {
+    font-size: 32px;
+    padding-bottom: 20px;
+}
+.describtion p:not(:last-child){
+    padding-bottom: 20px;
+}
+
+#form {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 40px;
+    background: rgb(174, 4, 127);
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 1);
+    text-align: center;
+}
+.title {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+#smlarr {
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    width: 50px;
+    margin: 10px auto;
+}
+#undscr {
+    width: 100%;
+}
+
+.input-box {
+    margin: 15px 0;
+    text-align: left;
+}
+
+.input-box label {
+    display: block;
+    margin: 5px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.input-box input, 
+.select-box select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-box input:focus, 
+.select-box select:focus {
+    border-color: #d63384;
+    box-shadow: 0 0 5px rgba(214, 51, 132, 0.5);
+}
+
+.select-box {
+    margin-top: 10px;
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #d63384;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: #a02764;
+    box-shadow: 0 0 10px rgba(214, 51, 132, 0.7);
+}
+
+/* delete */
+h1.why {
+    font: italic bold 20pt / 1.5 serif;
+    text-align: center;
+}
+a.about {
+    text-decoration: none;
+    color: #ffa4f9;
+    background-color: #370033;
+    padding: 10px;
+}
+#hiphop {
+    color: aqua;
+}
+#contemp {
+    color: #a6ff00;
+}
+/* delete */
+
+/*tablet*/
+@media (max-width: 992px) {
+    .newbies {
+        height: auto;
+    }
+    .trial-lesson {
+        width: 550px;
+    }
+    .ready {
+        font-size: 32px;
+    }
+    .regi {
+        font-size: 16px;
+        max-width: 250px;
+    }
+    .big-arrow {
+        width: 200px;
+    }
+    .button-regi {
+        width: 210px;
+        height: 62px;
+    }
+    .carousel img {
+        height: 320px;
+    }
+    .invite {
+        width: 570px;
+        padding: 100px 0;
+    }
+    .letsgo {
+        font-size: 24px;
+    }
+    .describtion {
+        font-size: 14px;
+    }
+}
+
+/*mobile*/
+@media (max-width: 576px) {
+    .newbies {
+        height: auto;
+    }
+    .trial-lesson {
+        width: 350px;
+    }
+    .ready {
+        font-size: 22px;
+    }
+    .regi {
+        font-size: 14px;
+        max-width: 200px;
+    }
+    .big-arrow {
+        width: 140px;
+    }
+    .button-regi {
+        width: 180px;
+        height: 52px;
+    }
+    .carousel img {
+        height: 200px;
+    }
+    .invite {
+        width: 350px;
+        padding: 80px 0;
+    }
+    .letsgo {
+        font-size: 18px;
+    }
+    .describtion {
+        font-size: 12px;
+    }
+}

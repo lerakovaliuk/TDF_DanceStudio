@@ -1,0 +1,369 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: white;
+    background-color: black;
+    line-height: 1.5;
+    background-image: radial-gradient(rgb(174, 4, 127), rgb(55, 0, 51) 70%);
+}
+
+.container {
+    max-width: 1500px;
+    width: 100%;
+    padding: 0 5px;
+    margin: 0 auto;
+}
+
+.header {
+    padding: 15px 0;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 25px;
+}
+
+.logo {
+    width: 65px;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu-item {
+    list-style-type: none;
+}
+
+.menu-link {
+    color: white;
+    font-weight: 100;
+    text-decoration: none;
+    position: relative;
+    transition: background-color 0.3s, border 0.3s;
+    padding: 10px 15px;
+}
+.menu-link:hover {
+    background-color: rgba(174, 4, 127, 0.5);
+    border-radius: 4px;
+}
+.menu-link:active {
+    border: 2px solid black;
+    background-color: transparent;
+}
+.toggle-btn {
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.header-media {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-media a {
+    cursor: pointer;
+}
+
+.instagram {
+    padding: 0 5px;
+    width:45px;
+    display:inline-block;
+    -webkit-mask:url(../image/instagram.png) center/contain no-repeat;
+            mask:url(../image/instagram.png) center/contain no-repeat;
+    
+    background:url(../image/color-pink.png) center/contain no-repeat;
+    /* background-blend-mode:darken; */
+}
+.instagram:before {
+    content:"";
+    display:block;
+    padding-top:100%;
+}
+
+.tiktok {
+    padding: 0 5px;
+    width:40px;
+    display:inline-block;
+    -webkit-mask:url(../image/tiktok.png) center/contain no-repeat;
+            mask:url(../image/tiktok.png) center/contain no-repeat;
+    
+    background:url(../image/color-pink.png) center/contain no-repeat;
+    /* background-blend-mode:darken; */
+}
+.tiktok:before {
+    content:"";
+    display:block;
+    padding-top:100%;
+}
+
+.telegram {
+    padding: 0 5px;
+    width:40px;
+    display:inline-block;
+    -webkit-mask:url(../image/tg.png) center/contain no-repeat;
+            mask:url(../image/tg.png) center/contain no-repeat;
+    
+    background:url(../image/color-pink.png) center/contain no-repeat;
+    /* background-blend-mode:darken; */
+}
+.telegram:before {
+    content:"";
+    display:block;
+    padding-top:100%;
+}
+
+
+
+
+
+.footer {
+    padding: 20px 0; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    min-height: 200px;
+}
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../image/разом\ футер.jpeg') no-repeat center center;
+    background-size: cover;
+    opacity: 0.2;
+    z-index: 1; /* Фон позаду тексту */
+}
+
+.info {
+    z-index: 2; /* Текст поверх фону */
+    position: relative;
+    padding-left: 50px;
+}
+
+.map {
+    z-index: 2;
+    position: relative;
+    padding-right: 50px;
+    margin-top: 10px;
+}
+
+iframe {
+    border-radius: 5px; 
+    border: 0; 
+    width: 350px;
+    height: 250px;
+}
+
+
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 70px;
+    height: 0;
+    width: 200px;
+    background: rgba(133, 9, 98, 0.4);
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    overflow-y: scroll;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown-menu::-webkit-scrollbar {
+    display: none;
+  }
+.dropdown-menu.open {
+    height: 250px;
+}
+.dropdown-menu li {
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dropdown-menu .menu-link {
+    font-weight: 400;
+}
+.dropdown-menu .menu-link:hover {
+    background-color: rgb(55, 0, 51, 0.7);
+    border-radius: 4px;
+}
+.dropdown-menu .menu-link:active {
+    border: 2px solid black;
+    background-color: transparent;
+}
+
+
+
+/*АДАПТАЦІЯ*/
+
+/*tablet*/
+@media (max-width: 992px) {
+    body {
+        background-image: radial-gradient(rgb(174, 4, 127), rgb(55, 0, 51) 75%);
+    }
+    .header-nav .menu {
+        display: none;
+    }
+    .toggle-btn {
+        display: block;
+        padding-left: 55px;
+    }
+    .dropdown-menu {
+        display: block;
+        z-index: 1;
+    }
+    .logo {
+        width: 60px;
+    }
+    .info {
+        font-size: 14px;
+    }
+    iframe {
+        height: 150px;
+        width: 100%;
+    }
+}
+
+/*mobile*/
+@media (max-width: 576px) {
+    body {
+        background-image: radial-gradient(rgb(174, 4, 127), rgb(55, 0, 51) 80%);
+    }
+    .dropdown-menu {
+        left: 2rem;
+        width: unset;
+    }
+    .header-media {
+        display: none;
+    }
+    .logo {
+        width: 55px;
+    }
+    .footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .info {
+        font-size: 12px;
+        padding-left: auto;
+    }
+    iframe {
+        width: 80%;
+        height: 100px;
+    }
+}
+
+/*desktop*/
+/* @media (max-width: 1024px) {
+    .header-nav {
+        flex-direction: column;
+        margin: 0 20px;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-link {
+        font-size: 1.2em;
+    }
+
+    .trial-lesson {
+        margin: 0 auto;
+    }
+
+    .invite {
+        padding: 80px 0;
+        margin: 0 auto;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+
+    .map {
+        margin-top: 20px;
+    }
+} */
+
+/*tablet*/
+/* @media (max-width: 768px) {
+    .big-arrow {
+        width: 180px;
+    }
+
+    .button-regi {
+        padding: 15px 60px;
+    }
+
+    .ready {
+        font-size: 32px;
+    }
+
+    .footer {
+        padding: 20px;
+    }
+
+    .info {
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .header-media {
+        display: none;
+    }
+
+    .wrapper i:first-child {
+        display: block;
+    }
+} */
+
+/*mobile*/
+/* @media (max-width: 480px) {
+    .menu {
+        gap: 10px;
+    }
+
+    .ready {
+        font-size: 24px;
+    }
+
+    .big-arrow {
+        width: 120px;
+    }
+
+    .small-arrow {
+        width: 40px;
+        height: 30px;
+    }
+
+    .button-regi {
+        padding: 12px 40px;
+        font-size: 0.9em;
+    }
+
+    iframe {
+        width: 100%;
+        height: 200px;
+    }
+} */
