@@ -272,7 +272,7 @@ h3.title {
     border-radius: 10px;
 }
 
-.advantages-list li {
+ol > li {
     margin-bottom: 10px;
     font-weight: bold;
     color: #d63384;
@@ -314,6 +314,15 @@ h3.title {
     padding-left: 20px;
     color: #811c4e;
     border-left: 3px solid #d63384;
+}
+h3 + ol {
+    margin-top: 10px;
+}
+b + i {
+    color: #d63384;
+}
+p > i {
+    background-color: #ffffff;
 }
 
 /* delete */
