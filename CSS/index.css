@@ -41,7 +41,9 @@
     justify-content: center;
     align-items: center;
 }
-
+.button-regi:hover {
+    background-color: rgba(174, 4, 127, 0.5);
+}
 .small-arrows {
     width: auto;
     padding: 25px 0;
@@ -197,7 +199,7 @@
     margin-top: 20px;
 }
 
-button {
+.button-container button {
     padding: 10px 20px;
     background-color: #d63384;
     color: white;
@@ -208,7 +210,7 @@ button {
     font-size: 18px;
 }
 
-button:hover {
+.button-container button:hover {
     background-color: #a02764;
     box-shadow: 0 0 10px rgba(214, 51, 132, 0.7);
 }
@@ -217,6 +219,25 @@ button:hover {
 h1.why {
     font: italic bold 20pt / 1.5 serif;
     text-align: center;
+}
+#learndance:visited, #learndance:link {
+    text-decoration: none;
+    color: #370033;
+    background-color: #ffa4f9;
+    padding: 5px;
+}
+#learndance:hover {
+    text-decoration: underline;
+    color: #ffa4f9;
+    background-color: #370033;
+    padding: 5px;
+}
+#learndance:active {
+    text-decoration: none;
+    border: 5px solid #370033;
+    color: #ffa4f9;
+    background-color: #370033;
+    padding: 5px;
 }
 a.about {
     text-decoration: none;
@@ -260,6 +281,24 @@ table th {
 h3.title {
     font: italic bold 20pt / 1.5 serif;
     text-align: center;
+}
+h2 span {
+    color: #d63384;
+}
+.advantages-disadvantages {
+    overflow: hidden;
+}
+.advantages {
+    float: left;
+}
+.disadvantages {
+    float: right;
+}
+#advant::after {
+    content: " (а у нас їх багато)";
+}
+#disadvant::before {
+    content: "❎ ";
 }
 .advantages-list {
     width: 50%;
