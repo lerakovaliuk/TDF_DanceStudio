@@ -1,0 +1,9 @@
+#content, #box {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    background-color: rgba(187, 16, 150, 0.504);
+}
+#title, #para, .text {
+    background-color: rgba(124, 7, 93, 0.779);
+}

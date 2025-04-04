@@ -90,3 +90,44 @@ function highlightParagraphs() {
 // highlightParagraphs();
 
 
+// Функція з використанням властивостей DOM-вузла
+function useDOMProperties() {
+    let para = document.getElementById("para");
+    console.log("innerHTML:", para.innerHTML); 
+    para.innerHTML = "Готуйтесь танцювати та <strong>запалювати</strong>!";
+
+    let container = document.getElementById("box");
+    console.log("outerHTML:", container.outerHTML);
+
+    let textNode = para.firstChild;
+    console.log("nodeValue/data:", textNode.nodeValue);
+
+    console.log("textContent:", para.textContent);
+}
+// useDOMProperties();
+
+
+// Функція для зміни вмісту сторінки
+function modifyPageContent() {
+    document.write("<h2>Ми завжди раді бачити вас у стінах нашої студії!</h2>");
+
+    let newElement = document.createElement("p");
+    let textNode = document.createTextNode("Ми втілюємо ваші мрії у реальність!");
+    newElement.append(textNode);
+    document.getElementById("content").append(newElement);
+
+    let newHeading = document.createElement("h2");
+    newHeading.textContent = "Оголошення!";
+    document.getElementById("content").prepend(newHeading);
+
+    let anotherParagraph = document.createElement("p");
+    anotherParagraph.textContent = "На жаль, наразі студія не функціонує через постійну небезпеку ворожих обстрілів(";
+    newHeading.after(anotherParagraph);
+
+    let replacement = document.createElement("p");
+    replacement.textContent = "Раді повідомити, що ми відновлюємо роботу!";
+    anotherParagraph.replaceWith(replacement);
+
+    setTimeout(() => {newElement.remove();}, 5000);
+}
+// modifyPageContent();
