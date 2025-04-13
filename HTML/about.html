@@ -65,14 +65,51 @@
     </header>
 
     <main>
-        <div id="content">
+        <!-- <div id="content">
             <h1 id="title">Ласкаво просимо до танцювальної студії!</h1>
             <p class="text">Ми пропонуємо заняття з різних стилів танцю.</p>
             <p class="text">Наші тренери – професіонали у своїй справі.</p>
         </div>
         <div id="box">
             <p id="para">Приєднуйся <strong>танцювати</strong> і ти!</p>
+        </div> -->
+
+        <div class="lab7">
+            <button id="danceBtn" onclick="handleClickAttr()">Записатись на пробне заняття</button>
+
+            <br>
+
+            <h3>Натискай на стиль, про який хочеш дізнатися більше!</h3>
+            <ul id="styleList">
+                <li>Хіп-хоп</li>
+                <li>Хілс</li>
+                <li>Контемп</li>
+                <li>Вог</li>
+            </ul>
+
+            <br>
+
+            <h3>Детальніше про студію:</h3>
+            <div id="danceMenu">
+                <button data-action="location">Локація</button>
+                <button data-action="schedule">Години роботи</button>
+                <button data-action="contacts">Контакти</button>
+            </div>
+
+            <br>
+
+            <p>Для того, щоб на свій день народження ви могли отримати приємний подарунок, уведіть число та місяць свого народження!</p>
+            <p>Число: <input type="button" value="1" data-counter></p>
+            <p>Місяць: <input type="button" value="1" data-counter></p>
+
+            <br>
+
+            <button data-toggle-id="subscribe-form">Натисніть, щоб написати відгук!</button>
+            <form id="subscribe-form" hidden>
+                <label>Ваш відгук: <input type="text"></label>
+            </form>
         </div>
+        
     </main>
 
     <footer>
@@ -91,6 +128,7 @@
     </script> -->
 
     <script src="../JS/script.js"></script>
+    <script src="../JS/script2.js"></script>
 
 </body>
 </html>
