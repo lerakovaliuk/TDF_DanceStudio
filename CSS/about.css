@@ -8,7 +8,7 @@
     background-color: rgba(124, 7, 93, 0.779);
 }
 
-.lab7 {
+.lab7, .lab8 {
     margin: 20px auto;
     padding: 20px;
     max-width: 600px;
@@ -31,4 +31,18 @@
 
 .highlight {
     background-color: rgb(73, 18, 58);
+}
+
+.style-item {
+    padding: 10px;
+    margin: 0px;
+    background-color: rgba(124, 7, 93, 0.779);
+    border: 1px solid #ccc;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.highlights {
+    background-color: #00a90b;
+    color: #000;
+    font-weight: bold;
 }
